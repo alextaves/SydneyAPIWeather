@@ -1,2 +1,0 @@
-# SydneyAPIWeather
-Created with CodeSandbox
