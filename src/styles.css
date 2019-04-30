@@ -1,4 +1,86 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 5px;
+  background-color: #dac8c5;
+}
+
+
+.fiveDays {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: auto;
+  background-color:#1240b0
+  
+}
+.city {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 75px;
+  background-color: #78c7d0;
+  font-family: "Didact Gothic", helvetica, sans-serif;
+  font-weight: bold;
+}
+.cityName {
+  padding-left: 1rem;
+  margin-right: auto;
+}
+.links{
+  margin-right: 1rem;
+  padding-top: .25rem;
+}
+.todo{
+  margin-right: 1rem;
+  padding-top: .25rem;
+}
+
+.singleDay {
+  background-color: blue;
+  font-family: "Didact Gothic", helvetica, sans-serif;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.singleDay > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleDay > img {
+  display: flex;
+  margin: 0 auto;
+}
+
+img {
+  width: 60px;
+  padding: 0.25rem;
+}
+
+.fiveDays > div:nth-child(1n) {
+  background-color: #5ca8c3;
+}
+
+.fiveDays > div:nth-child(3n) {
+  background-color: #f8ea00;
+}
+
+.fiveDays > div:nth-child(2n) {
+  background-color: #098672;
+}
+
+.fiveDays div:nth-child(4n) {
+  background-color: #de7517;
+}
+
+.fiveDays > div:nth-child(5n) {
+  background-color: #dd0629;
+}
+
