@@ -1,25 +1,46 @@
 import React from "react"
 import Card from "./Card"
 import City from "./City"
+import weatherData from "./weather"
 
 class App extends React.Component {
+    constructor(){
+        super()
+        this.state = {}
+    }
+
+    
+
+    
     render(){
+        console.log(weatherData[0].card.high)
+        let cardArray = weatherData.map(item => <Card key={item.id} card={item.card} />)
         return(
             <div className="container">
                 <City/>
             <div className="fiveDays">
+                {cardArray}
                 
-                <Card
-                    day="Friday"
-                    icon="sun.png"
-                    low="22"
-                    high="28"
+            </div>
+            </div>
+        )
+    }
+}
+
+export default App
+
+
+/* <Card
+                    day={weatherData[0].card.day}
+                    icon={weatherData[0].card.icon}
+                    low={weatherData[0].card.low}
+                    high={weatherData[0].card.high}
                 />
                 <Card
-                    day="Saturday"
-                    icon="flash.png"
-                    low="21"
-                    high="32"
+                    day={weatherData[1].card.day}
+                    icon={weatherData[1].card.icon}
+                    low={weatherData[1].card.low}
+                    high={weatherData[1].card.high}
                     />
                 <Card
                     day="Sunday"
@@ -38,11 +59,4 @@ class App extends React.Component {
                     icon="sun.png"
                     low="22"
                     high="27"
-                    />
-            </div>
-            </div>
-        )
-    }
-}
-
-export default App
+                    /> */
